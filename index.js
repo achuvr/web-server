@@ -23,8 +23,8 @@ app.get("/api/v1/users", function (req, res) {
    }) ;
 });
 
-
-app.listen(2434, function (){
+const PORT = process.env.PORT || 2434;
+app.listen(PORT, function (){
     console.log("I am running!");
 });
 
