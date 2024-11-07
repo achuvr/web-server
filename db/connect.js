@@ -9,10 +9,3 @@ const connectDB = (url) => {
 };
 
 module.exports = connectDB;
-
-
-//main().catch(err => console.log(err));
-
-// async function main() {
-//     await mongoose.connect("mongodb://localhost:5000/test");
-// }
