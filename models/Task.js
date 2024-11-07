@@ -5,7 +5,7 @@ const TaskSchema = new mongoose.Schema({
        type: String,
        required: [true, "タスク名を入れて下さい"],
        trim: true,
-       maxlength: [30, "タスク名は20文字以内で入力してください"],
+       maxlength: [30, "タスク名は30文字以内で入力してください"],
    }, 
     completed: {
        type: Boolean, 
