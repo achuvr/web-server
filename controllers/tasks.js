@@ -15,12 +15,26 @@ const getAllTasks = async (req, res) =>
     }
 };
 
+const getAllTasks2 = async (req, res) =>
+{
+    console.log("called getAllTasks2");
+    try
+    {
+        const allTask = await Task.find({});
+        res.status(200).json(allTask);
+    }
+    catch (err)
+    {
+        res.status(500).json(err);
+    }
+}
+
 const createTask = async (req, res) => 
 {
     console.log("called createTask");
     try 
     {
-        const ceateTask = await Task.create(req.body);
+        const createTask = await Task.create(req.body);
         res.status(200).json(createTask);
     }
     catch(err) 
@@ -28,6 +42,19 @@ const createTask = async (req, res) =>
         res.status(500).json(err);
     }
 };
+
+const createUser = async (req, res) =>
+{
+    console.log("called createUser from Unity");
+    try {
+        const createUser = await Task.create(req.body);
+        res.status(200).json(createUser);
+    }
+    catch(err)
+    {
+        res.status(500).json(err);
+    }
+}
 
 const getSingleTask = async (req, res) => {
     console.log("called getSingleTask");
@@ -94,4 +121,6 @@ module.exports = {
     getSingleTask,
     updateTask,
     deleteTask,
+    createUser,
+    getAllTasks2,
 };

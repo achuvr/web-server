@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/*
 const TaskSchema = new mongoose.Schema({
    name: {
        type: String,
@@ -10,6 +11,21 @@ const TaskSchema = new mongoose.Schema({
     completed: {
        type: Boolean, 
         default: false,
+    },
+});
+*/
+const TaskSchema = new mongoose.Schema({
+    userId: {
+        type: String,
+    },
+    authCode: {
+        type: String,
+    },
+    accessTime: {
+        type: String,
+    },
+    mstVer: {
+        type: String,
     },
 });
 
