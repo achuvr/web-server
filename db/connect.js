@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectDB = (url) => {
     
     // ----------------------------------------------
-    // url = url.substring(1, url.length - 2);
+    url = url.substring(1, url.length - 2);
     // ----------------------------------------------
     
     return mongoose
