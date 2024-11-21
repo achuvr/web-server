@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-/*
 const TaskSchema = new mongoose.Schema({
    name: {
        type: String,
@@ -13,20 +12,21 @@ const TaskSchema = new mongoose.Schema({
         default: false,
     },
 });
-*/
-const TaskSchema = new mongoose.Schema({
-    userId: {
-        type: String,
-    },
-    authCode: {
-        type: String,
-    },
-    accessTime: {
-        type: String,
-    },
-    mstVer: {
-        type: String,
-    },
-});
+
+ */
+// const TaskSchema = new mongoose.Schema({
+//     userId: {
+//         type: String,
+//     },
+//     authCode: {
+//         type: String,
+//     },
+//     accessTime: {
+//         type: String,
+//     },
+//     mstVer: {
+//         type: String,
+//     },
+// });
 
 module.exports = mongoose.model("Task", TaskSchema);
